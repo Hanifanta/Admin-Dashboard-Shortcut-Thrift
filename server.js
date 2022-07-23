@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/assets', express.static(__dirname + '/public'));
 
 var corsOptions = {
-  origin: ['http://localhost:8000'],
+  origin: ['https://admin-dashboard-shortcut-thrift.up.railway.app'],
 };
 
 app.use(cors(corsOptions));
@@ -183,6 +183,6 @@ app.get('/logout', function (req, res) {
   res.redirect('/login');
 });
 
-app.listen(8000, () => {
-  console.log('Server is running at port 8000');
+app.listen(80, () => {
+  console.log('Server is running at port 80');
 });
